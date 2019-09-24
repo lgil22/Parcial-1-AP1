@@ -1,4 +1,4 @@
-﻿namespace Parcial1AP1.UI.Registro
+﻿namespace Parcial1AP1.UI
 {
     partial class rEvaluacion
     {
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.IDlabel = new System.Windows.Forms.Label();
-            this.IDtextBox = new System.Windows.Forms.TextBox();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Estudiantelabel = new System.Windows.Forms.Label();
             this.EstudiantetextBox = new System.Windows.Forms.TextBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.Valorlabel = new System.Windows.Forms.Label();
-            this.ValortextBox = new System.Windows.Forms.TextBox();
-            this.LogradotextBox = new System.Windows.Forms.TextBox();
-            this.Logradolabel = new System.Windows.Forms.Label();
-            this.Perdidolabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Perdidolabel = new System.Windows.Forms.Label();
+            this.Logradolabel = new System.Windows.Forms.Label();
+            this.LogradotextBox = new System.Windows.Forms.TextBox();
+            this.ValortextBox = new System.Windows.Forms.TextBox();
+            this.Valorlabel = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +48,11 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IDlabel
@@ -59,13 +63,6 @@
             this.IDlabel.Size = new System.Drawing.Size(18, 13);
             this.IDlabel.TabIndex = 0;
             this.IDlabel.Text = "ID";
-            // 
-            // IDtextBox
-            // 
-            this.IDtextBox.Location = new System.Drawing.Point(40, 38);
-            this.IDtextBox.Name = "IDtextBox";
-            this.IDtextBox.Size = new System.Drawing.Size(100, 20);
-            this.IDtextBox.TabIndex = 1;
             // 
             // Fechalabel
             // 
@@ -115,37 +112,12 @@
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Calificación Tareas y Parcial";
             // 
-            // Valorlabel
+            // textBox1
             // 
-            this.Valorlabel.AutoSize = true;
-            this.Valorlabel.Location = new System.Drawing.Point(6, 25);
-            this.Valorlabel.Name = "Valorlabel";
-            this.Valorlabel.Size = new System.Drawing.Size(31, 13);
-            this.Valorlabel.TabIndex = 0;
-            this.Valorlabel.Text = "Valor";
-            // 
-            // ValortextBox
-            // 
-            this.ValortextBox.Location = new System.Drawing.Point(9, 41);
-            this.ValortextBox.Name = "ValortextBox";
-            this.ValortextBox.Size = new System.Drawing.Size(45, 20);
-            this.ValortextBox.TabIndex = 1;
-            // 
-            // LogradotextBox
-            // 
-            this.LogradotextBox.Location = new System.Drawing.Point(60, 41);
-            this.LogradotextBox.Name = "LogradotextBox";
-            this.LogradotextBox.Size = new System.Drawing.Size(45, 20);
-            this.LogradotextBox.TabIndex = 2;
-            // 
-            // Logradolabel
-            // 
-            this.Logradolabel.AutoSize = true;
-            this.Logradolabel.Location = new System.Drawing.Point(57, 25);
-            this.Logradolabel.Name = "Logradolabel";
-            this.Logradolabel.Size = new System.Drawing.Size(46, 13);
-            this.Logradolabel.TabIndex = 3;
-            this.Logradolabel.Text = "Logrado";
+            this.textBox1.Location = new System.Drawing.Point(111, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(40, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // Perdidolabel
             // 
@@ -156,12 +128,37 @@
             this.Perdidolabel.TabIndex = 4;
             this.Perdidolabel.Text = "Perdido";
             // 
-            // textBox1
+            // Logradolabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 20);
-            this.textBox1.TabIndex = 5;
+            this.Logradolabel.AutoSize = true;
+            this.Logradolabel.Location = new System.Drawing.Point(57, 25);
+            this.Logradolabel.Name = "Logradolabel";
+            this.Logradolabel.Size = new System.Drawing.Size(46, 13);
+            this.Logradolabel.TabIndex = 3;
+            this.Logradolabel.Text = "Logrado";
+            // 
+            // LogradotextBox
+            // 
+            this.LogradotextBox.Location = new System.Drawing.Point(60, 41);
+            this.LogradotextBox.Name = "LogradotextBox";
+            this.LogradotextBox.Size = new System.Drawing.Size(45, 20);
+            this.LogradotextBox.TabIndex = 2;
+            // 
+            // ValortextBox
+            // 
+            this.ValortextBox.Location = new System.Drawing.Point(9, 41);
+            this.ValortextBox.Name = "ValortextBox";
+            this.ValortextBox.Size = new System.Drawing.Size(45, 20);
+            this.ValortextBox.TabIndex = 1;
+            // 
+            // Valorlabel
+            // 
+            this.Valorlabel.AutoSize = true;
+            this.Valorlabel.Location = new System.Drawing.Point(6, 25);
+            this.Valorlabel.Name = "Valorlabel";
+            this.Valorlabel.Size = new System.Drawing.Size(31, 13);
+            this.Valorlabel.TabIndex = 0;
+            this.Valorlabel.Text = "Valor";
             // 
             // Buscarbutton
             // 
@@ -230,11 +227,23 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             // 
+            // IDnumericUpDown
+            // 
+            this.IDnumericUpDown.Location = new System.Drawing.Point(41, 39);
+            this.IDnumericUpDown.Name = "IDnumericUpDown";
+            this.IDnumericUpDown.Size = new System.Drawing.Size(65, 20);
+            this.IDnumericUpDown.TabIndex = 14;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // rEvaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 399);
+            this.Controls.Add(this.IDnumericUpDown);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -247,13 +256,14 @@
             this.Controls.Add(this.Estudiantelabel);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.Fechalabel);
-            this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.IDlabel);
             this.Name = "rEvaluacion";
             this.Text = "rEvaluacion";
             this.Load += new System.EventHandler(this.REvaluacion_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,7 +272,6 @@
         #endregion
 
         private System.Windows.Forms.Label IDlabel;
-        private System.Windows.Forms.TextBox IDtextBox;
         private System.Windows.Forms.Label Fechalabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label Estudiantelabel;
@@ -281,5 +290,7 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.NumericUpDown IDnumericUpDown;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
